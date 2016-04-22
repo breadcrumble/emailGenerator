@@ -1,0 +1,79 @@
+.navbar-default.navbar-white{
+  background-color: #fff;
+}
+
+
+.navbar.alpha{
+  min-height: 75px;
+  margin-bottom: 0px;
+}
+
+.brand-logo{
+  fill: #012981;
+}
+
+
+.navbar-nav > li > a{
+  color: #252422;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+}
+
+.flex-container {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  justify-content: center;
+   flex-direction: column;
+}
+.footer-text{
+  position: relative;
+  top: 0.4rem;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+.green-background{
+  background-color: #95ce71;
+  color: #fff;
+}
+
+.green-shadow{
+  box-shadow: 20px 20px 0px #95ce71;
+}
+.whitey{color: #FFFCF2;}
+.tany{color: #ccc5b9;}
+.grey{color: #403d39;}
+.blacky{color: #252422;}
+
+.whitey-bg{background-color: #FFFCF2;}
+.tany-bg{background-color: #ccc5b9;}
+.grey-bg{background-color: #403d39;}
+.blacky-bg{background-color: #252422;}
+
+
+
+
+
+.btn-green-inverse{
+    color: #95ce71;
+    background-color: #ffffff;
+    border-color: #95ce71;
+}
+.btn-green-inverse:hover, .btn-green-inverse:active{
+    color: #87c75e;
+    background-color: #ffffff;
+    border-color: #87c75e;
+}
+.btn.alpha{
+  padding: 6px 15px;
+  margin: 0 5px;
+}
+p{
+  font-weight: lighter;
+  font-family: "Merriweather", Palatino, Georgia, Serif;
+  line-height: 170%
+}
