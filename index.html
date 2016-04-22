@@ -3,36 +3,22 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Swipe Enrichment</title>
 	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/app.css">
 	<script src="lib/angular/angular.js"></script>
-	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="lib/angular/angular-ui-router.min.js"></script>
 	<script src="main.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
 </head>
 
 <body ng-controller="AppController">
-	<div class='container'>
-<div class="page-header">
-  <h1>Email Generator</h1>
-</div>
-		<form id="parentChild" ng-submit="generateEmail(parentList,childList)">
-			<h3>Parent List <small>Total number of parents: {{arrayLength(parentList)}}</small></h3>
-			<input type='text' class='form-control input-md' placeholder='Parent List' ng-model="parentList">
-			<br>
-			<h3>Child List: <small>Total number of children: {{arrayLength(childList)}}</small></h3><input type='text' class='form-control input-md' placeholder='Student List' ng-model="childList">
-			<br>
 
-		</form>
+<ng-include src="'templates/partials/nav.html'"></ng-include>
 
+<div ui-view></div>
+<ng-include src="'templates/partials/footer.html'"></ng-include>
 
-
-	<hr>
-		<p ng-repeat="t in generateEmail(parentList, childList)">
-			Hi {{t.parent}}, Your child, {{t.child}} has been doing well in class. Yours sincerely, Anna
-		</p>
-
-
-	</div>
 </body>
 
 </html>

@@ -1,24 +1,35 @@
-angular.module('app', ['ui.bootstrap']).controller('AppController', function($scope, $http) {
-  $scope.abc = "kjas";
-  $scope.generateEmail = function(parent, child) {
-    var parentArray = [],
-      childArray = [],
-      pcObject, combinedArray = [];
-    parentArray = parent.split(",");
-    childArray = child.split(",");
-    for (var i = 0; i < parentArray.length; i++) {
-      pcObject = {
-        "parent": parentArray[i],
-        "child": childArray[i]
-      };
-      combinedArray.push(pcObject);
-    }
+angular.module('app', ['ui.router']).controller('AppController', function($scope, $http) {
+}).config(function($stateProvider, $urlRouterProvider) {
 
-    return combinedArray;
-  };
-  $scope.arrayLength = function(string) {
-    var array = string.split(",");
-    return array.length;
-  };
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+
+        // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+            url: '/',
+            templateUrl: 'templates/home.html'
+        })
+
+        .state('about', {
+            url: '/about',
+            templateUrl: 'templates/about.html'
+        })
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'templates/contact.html'
+        })
+        .state('core', {
+            url: '/core',
+            templateUrl: 'templates/core.html'
+        })
+        .state('elective', {
+            url: '/elective',
+            templateUrl: 'templates/elective.html'
+        })
+        .state('financial', {
+          url: 'core/financial',
+          templateUrl: 'templates/core/financial.html'
+        });
 
 });
